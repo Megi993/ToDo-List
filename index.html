@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Todo List With Sass</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">	
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div id="wrapper">
+
+		<input type="text" id="task"/>
+		<button>Add</button>
+
+		<ul id="taskList"></ul>
+
+		<div id="myModal" class="modal js-hide">
+			<div class="modal-content">
+				<span class="close">&times;</span>
+				<p>No empty values are allowed!</p>
+			</div>
+		</div>
+
+		<div id="modalDuplicate" class="modal js-hide">
+			<div class="modal-content">
+				<span class="close">&times;</span>
+				<p>No duplicate values are allowed!</p>
+			</div>
+		</div>
+
+	</div>
+	<!-- Script -->
+	<script src="js/main.js"></script>
+</body>
+</html>

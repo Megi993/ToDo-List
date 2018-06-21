@@ -1,0 +1,130 @@
+//Variables
+$myWidth: 500px;
+$myMargin: 0 auto;
+$background: #00bcd4;
+$transparent: transparent;
+$border: 1px solid #f1f0f0;
+$textColor: #ffffff;
+$outline: none;
+$noBorder: none;
+$myHeight: 35px;
+$padding: 10px;
+$fontSize: 1.2em;
+$cursor: pointer;
+
+
+#wrapper {
+    width: $myWidth;
+    margin: $myMargin;
+    background: $background;
+    border: $border;
+    padding-left: $padding;
+    font-size: $fontSize;
+    #task {
+        background: $transparent;
+        color: $textColor;
+        font-size: $fontSize;
+        width: 80%;
+        height: $myHeight;
+        border: $noBorder;
+        border-bottom: 2px solid $textColor;
+        outline: $outline;
+        margin: 15px 0 5px 0;
+        ::-webkit-input-placeholder {
+            /* Chrome/Opera/Safari */
+            color: $textColor;
+        }
+        ::-moz-placeholder {
+            /* Firefox 19+ */
+            color: $textColor;
+        }
+        :-ms-input-placeholder {
+            /* IE 10+ */
+            color: $textColor;
+        }
+        :-moz-placeholder {
+            /* Firefox 18- */
+            color: $textColor;
+        }
+    }
+    button {
+        font-size: $fontSize;
+        border: 2px solid $textColor;
+        background: $transparent;
+        color: $textColor;
+        padding: 5px 10px;
+        outline: $outline;
+        cursor: $cursor;
+    }
+    ul#taskList {
+        padding: 0;
+        background: $textColor;
+        list-style-type: none;
+        text-align: left;
+        margin-bottom: 0;
+        margin-left: -10px;
+        li {
+            padding: $padding;
+            position: relative;
+            cursor: $cursor;
+            span {
+                position: absolute;
+                right: 0;
+                top: 0;
+                padding: $padding;
+            }
+        }
+    }
+}
+
+// Modal
+.modal {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+    text-align: center;
+    .modal-content {
+        background-color: #fefefe;
+        margin: 15% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 50%;
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            &:hover,
+            &:focus {
+                color: black;
+                text-decoration: none;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.js-close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: $padding;
+    &:hover {
+        color: $textColor;
+    }
+}
+
+.js-hide {
+    display: none;
+}
+
+.js-background {
+    background: #efebeb;
+}
